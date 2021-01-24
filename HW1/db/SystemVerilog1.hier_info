@@ -1,0 +1,49 @@
+|RCAddSub
+AddSub => C[0].IN1
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => Bb.IN0
+B[1] => Bb.IN0
+B[2] => Bb.IN0
+B[3] => Bb.IN0
+S[0] << FAbehave:s0.port0
+S[1] << FAbehave:s1.port0
+S[2] << FAbehave:s2.port0
+S[3] << FAbehave:s3.port0
+Cout << FAbehave:s3.port1
+
+
+|RCAddSub|FAbehave:s0
+s <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+
+
+|RCAddSub|FAbehave:s1
+s <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+
+
+|RCAddSub|FAbehave:s2
+s <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+
+
+|RCAddSub|FAbehave:s3
+s <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+a => Add0.IN1
+b => Add0.IN2
+cin => Add1.IN4
+
+

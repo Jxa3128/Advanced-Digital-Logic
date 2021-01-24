@@ -1,0 +1,15 @@
+/* Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition */
+JedecChain;
+	FileRevision(JESD32A);
+	DefaultMfr(6E);
+
+	P ActionCode(Ign)
+		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
+	P ActionCode(Cfg)
+		Device PartName(5CSEMA5F31) Path("Z:/Desktop/Spring2021/Advanced Digital Logic/HW1/RCAddSub/output_files/") File("RCAddSub.sof") MfrSpec(OpMask(1));
+
+ChainEnd;
+
+AlteraBegin;
+	ChainType(JTAG);
+AlteraEnd;
