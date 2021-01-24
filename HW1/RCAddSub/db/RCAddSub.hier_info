@@ -8,11 +8,11 @@ B[0] => Bb.IN0
 B[1] => Bb.IN0
 B[2] => Bb.IN0
 B[3] => Bb.IN0
-S[0] << FAbehave:s0.port0
-S[1] << FAbehave:s1.port0
-S[2] << FAbehave:s2.port0
-S[3] << FAbehave:s3.port0
-Cout << FAbehave:s3.port1
+S[0] <= FAbehave:s0.port0
+S[1] <= FAbehave:s1.port0
+S[2] <= FAbehave:s2.port0
+S[3] <= FAbehave:s3.port0
+Cout <= FAbehave:s3.port1
 
 
 |RCAddSub|FAbehave:s0

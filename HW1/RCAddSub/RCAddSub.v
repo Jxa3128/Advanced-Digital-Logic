@@ -13,15 +13,7 @@ module RCAddSub(
 //instantiate the full adder module for each stage of the ripple carry adder
 //select add (AddSub=0) or subtract (AddSub=1) operation //declare input ports
 
-/*
-xor(Bb[0],B[0],AddSub);
-xor(Bb[1],B[1],AddSub);
-xor(Bb[2],B[2],AddSub);
-xor(Bb[3],B[3],AddSub);
 
-xor(Cout,C[3],AddSub); //Carry = C3 for addition, Carry = not(C3) for subtraction
-
-*/
 
 FAbehave s0 (S[0], C[1], A[0], Bb[0], C[0]); //stage 0
 FAbehave s1 (S[1], C[2], A[1], Bb[1], C[1]); //stage 1
@@ -37,3 +29,13 @@ module FAbehave (s,cout,a,b,cin);
 	always @ (a,b,cin)
 		{cout,s} = a + b + cin;
 endmodule
+/*
+module bin2sev (
+	input [3:0] BIN,
+	output reg [0:6] SEV);
+	always @ (BIN) 
+		case ({BIN[3:0]})
+			4'b0000: (SEV{0:6]) = 7'b00000001;
+			endcase
+endmodule
+*/

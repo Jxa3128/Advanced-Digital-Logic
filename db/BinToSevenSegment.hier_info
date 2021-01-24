@@ -1,0 +1,14 @@
+|BinToSevenSegment
+w => ~NO_FANOUT~
+x => ~NO_FANOUT~
+y => ~NO_FANOUT~
+z => ~NO_FANOUT~
+a <= <GND>
+b <= <GND>
+c <= <GND>
+d <= <GND>
+e <= <GND>
+f <= <GND>
+g <= <VCC>
+
+
