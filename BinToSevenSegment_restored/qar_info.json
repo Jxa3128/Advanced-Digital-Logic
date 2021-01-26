@@ -1,0 +1,7 @@
+{
+	"common_dir" : "//vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/",
+	"acds_version" : "Version 18.1.0",
+	"platform" : "windows",
+	"os" : "Windows 10",
+	"qpf" : "BinToSevenSegment.qpf"
+}

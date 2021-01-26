@@ -1,0 +1,21 @@
+Quartus Prime Archive log --	/Desktop/Spring2021/Advanced Digital Logic/BinToSevenSegment.qarlog
+
+Archive:	/Desktop/Spring2021/Advanced Digital Logic/BinToSevenSegment.qar
+Date:		Mon Jan 25 19:20:13 2021
+Quartus Prime		18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+	=========== Files Selected: ===========
+//vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/BinToSevenSegment.qpf
+//vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/BinToSevenSegment.qsf
+//vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/BinToSevenSegment.v
+c:/intelfpga_lite/18.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 4 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Mon Jan 25 19:20:55 2021
+Source archive file:	//vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/BinToSevenSegment.qar
+Archive was extracted into	//vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/BinToSevenSegment_restored/
+		 - successfully.
