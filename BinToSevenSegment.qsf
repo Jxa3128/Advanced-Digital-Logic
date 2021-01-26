@@ -47,7 +47,25 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
 set_global_assignment -name VERILOG_FILE BinToSevenSegment.v
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_AE27 -to b
+set_location_assignment PIN_AE28 -to c
+set_location_assignment PIN_AG27 -to d
+set_location_assignment PIN_AF28 -to e
+set_location_assignment PIN_AG28 -to f
+set_location_assignment PIN_AH28 -to g
+set_location_assignment PIN_AJ29 -to h
+set_location_assignment PIN_AH29 -to i
+set_location_assignment PIN_AH30 -to j
+set_location_assignment PIN_AG30 -to k
+set_location_assignment PIN_AF29 -to l
+set_location_assignment PIN_AF30 -to m
+set_location_assignment PIN_AD27 -to n
+set_location_assignment PIN_AF10 -to w
+set_location_assignment PIN_AF9 -to x
+set_location_assignment PIN_AC12 -to y
+set_location_assignment PIN_AB12 -to z
+set_location_assignment PIN_AE26 -to a
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

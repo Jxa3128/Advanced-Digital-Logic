@@ -1,5 +1,5 @@
 Flow report for RCAddSub
-Sun Jan 24 14:49:37 2021
+Mon Jan 25 18:22:58 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,16 +40,16 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sun Jan 24 14:49:28 2021       ;
+; Flow Status                     ; Successful - Mon Jan 25 18:22:49 2021       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; RCAddSub                                    ;
 ; Top-level Entity Name           ; RCAddSub                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 5 / 32,070 ( < 1 % )                        ;
+; Logic utilization (in ALMs)     ; 17 / 32,070 ( < 1 % )                       ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 14 / 457 ( 3 % )                            ;
+; Total pins                      ; 57 / 457 ( 12 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/24/2021 14:48:22 ;
+; Start date & time ; 01/25/2021 18:21:42 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; RCAddSub            ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 52235210933.161152130209700            ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 52235210933.161162050205316            ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -93,11 +93,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:15     ; 1.0                     ; 4836 MB             ; 00:00:28                           ;
-; Fitter               ; 00:00:39     ; 1.0                     ; 6994 MB             ; 00:01:33                           ;
-; Assembler            ; 00:00:08     ; 1.0                     ; 4827 MB             ; 00:00:08                           ;
-; Timing Analyzer      ; 00:00:07     ; 1.0                     ; 5172 MB             ; 00:00:07                           ;
-; Total                ; 00:01:09     ; --                      ; --                  ; 00:02:16                           ;
+; Analysis & Synthesis ; 00:00:19     ; 1.0                     ; 4837 MB             ; 00:00:33                           ;
+; Fitter               ; 00:00:38     ; 1.0                     ; 6963 MB             ; 00:01:28                           ;
+; Assembler            ; 00:00:08     ; 1.0                     ; 4827 MB             ; 00:00:07                           ;
+; Timing Analyzer      ; 00:00:08     ; 1.1                     ; 5149 MB             ; 00:00:07                           ;
+; Total                ; 00:01:13     ; --                      ; --                  ; 00:02:15                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

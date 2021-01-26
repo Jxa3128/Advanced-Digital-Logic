@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RCAddSub
-Sun Jan 24 14:48:37 2021
+Mon Jan 25 18:22:00 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -42,14 +42,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Jan 24 14:48:37 2021       ;
+; Analysis & Synthesis Status     ; Successful - Mon Jan 25 18:22:00 2021       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; RCAddSub                                    ;
 ; Top-level Entity Name           ; RCAddSub                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 14                                          ;
+; Total pins                      ; 57                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -174,44 +174,47 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                ;
-+---------------------------------------------+--------------+
-; Resource                                    ; Usage        ;
-+---------------------------------------------+--------------+
-; Estimate of Logic utilization (ALMs needed) ; 4            ;
-;                                             ;              ;
-; Combinational ALUT usage for logic          ; 6            ;
-;     -- 7 input functions                    ; 0            ;
-;     -- 6 input functions                    ; 2            ;
-;     -- 5 input functions                    ; 2            ;
-;     -- 4 input functions                    ; 1            ;
-;     -- <=3 input functions                  ; 1            ;
-;                                             ;              ;
-; Dedicated logic registers                   ; 0            ;
-;                                             ;              ;
-; I/O pins                                    ; 14           ;
-;                                             ;              ;
-; Total DSP Blocks                            ; 0            ;
-;                                             ;              ;
-; Maximum fan-out node                        ; AddSub~input ;
-; Maximum fan-out                             ; 5            ;
-; Total fan-out                               ; 47           ;
-; Average fan-out                             ; 1.38         ;
-+---------------------------------------------+--------------+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimate of Logic utilization (ALMs needed) ; 16         ;
+;                                             ;            ;
+; Combinational ALUT usage for logic          ; 29         ;
+;     -- 7 input functions                    ; 0          ;
+;     -- 6 input functions                    ; 3          ;
+;     -- 5 input functions                    ; 2          ;
+;     -- 4 input functions                    ; 17         ;
+;     -- <=3 input functions                  ; 7          ;
+;                                             ;            ;
+; Dedicated logic registers                   ; 0          ;
+;                                             ;            ;
+; I/O pins                                    ; 57         ;
+;                                             ;            ;
+; Total DSP Blocks                            ; 0          ;
+;                                             ;            ;
+; Maximum fan-out node                        ; B[2]~input ;
+; Maximum fan-out                             ; 11         ;
+; Total fan-out                               ; 202        ;
+; Average fan-out                             ; 1.41       ;
++---------------------------------------------+------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name   ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------+-------------+--------------+
-; |RCAddSub                  ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 14   ; 0            ; |RCAddSub             ; RCAddSub    ; work         ;
-;    |FAbehave:s0|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RCAddSub|FAbehave:s0 ; FAbehave    ; work         ;
-;    |FAbehave:s1|           ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RCAddSub|FAbehave:s1 ; FAbehave    ; work         ;
-;    |FAbehave:s2|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RCAddSub|FAbehave:s2 ; FAbehave    ; work         ;
-;    |FAbehave:s3|           ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RCAddSub|FAbehave:s3 ; FAbehave    ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------+-------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                     ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name            ; Entity Name       ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------+-------------------+--------------+
+; |RCAddSub                  ; 29 (1)              ; 0 (0)                     ; 0                 ; 0          ; 57   ; 0            ; |RCAddSub                      ; RCAddSub          ; work         ;
+;    |BinToSevenSegment:d0|  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RCAddSub|BinToSevenSegment:d0 ; BinToSevenSegment ; work         ;
+;    |BinToSevenSegment:d1|  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RCAddSub|BinToSevenSegment:d1 ; BinToSevenSegment ; work         ;
+;    |BinToSevenSegment:d2|  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RCAddSub|BinToSevenSegment:d2 ; BinToSevenSegment ; work         ;
+;    |FAbehave:s0|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RCAddSub|FAbehave:s0          ; FAbehave          ; work         ;
+;    |FAbehave:s1|           ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RCAddSub|FAbehave:s1          ; FAbehave          ; work         ;
+;    |FAbehave:s2|           ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RCAddSub|FAbehave:s2          ; FAbehave          ; work         ;
+;    |FAbehave:s3|           ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RCAddSub|FAbehave:s3          ; FAbehave          ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -235,16 +238,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 6                           ;
-;     normal            ; 6                           ;
-;         2 data inputs ; 1                           ;
-;         4 data inputs ; 1                           ;
+; arriav_lcell_comb     ; 36                          ;
+;     normal            ; 36                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 5                           ;
+;         4 data inputs ; 17                          ;
 ;         5 data inputs ; 2                           ;
-;         6 data inputs ; 2                           ;
-; boundary_port         ; 14                          ;
+;         6 data inputs ; 3                           ;
+; boundary_port         ; 57                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.60                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.42                        ;
 +-----------------------+-----------------------------+
 
 
@@ -263,26 +269,47 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Jan 24 14:48:21 2021
+    Info: Processing started: Mon Jan 25 18:21:40 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RCAddSub -c RCAddSub
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
-Info (12021): Found 2 design units, including 2 entities, in source file rcaddsub.v
+Info (12021): Found 3 design units, including 3 entities, in source file rcaddsub.v
     Info (12023): Found entity 1: RCAddSub File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/HW1/RCAddSub/RCAddSub.v Line: 1
-    Info (12023): Found entity 2: FAbehave File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/HW1/RCAddSub/RCAddSub.v Line: 26
+    Info (12023): Found entity 2: FAbehave File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/HW1/RCAddSub/RCAddSub.v Line: 32
+    Info (12023): Found entity 3: BinToSevenSegment File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/HW1/RCAddSub/RCAddSub.v Line: 39
 Info (12127): Elaborating entity "RCAddSub" for the top level hierarchy
-Info (12128): Elaborating entity "FAbehave" for hierarchy "FAbehave:s0" File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/HW1/RCAddSub/RCAddSub.v Line: 18
+Info (12128): Elaborating entity "FAbehave" for hierarchy "FAbehave:s0" File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/HW1/RCAddSub/RCAddSub.v Line: 21
+Info (12128): Elaborating entity "BinToSevenSegment" for hierarchy "BinToSevenSegment:d0" File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/HW1/RCAddSub/RCAddSub.v Line: 26
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "Hex5[0]" is stuck at VCC File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/HW1/RCAddSub/RCAddSub.v Line: 5
+    Warning (13410): Pin "Hex5[1]" is stuck at VCC File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/HW1/RCAddSub/RCAddSub.v Line: 5
+    Warning (13410): Pin "Hex5[2]" is stuck at VCC File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/HW1/RCAddSub/RCAddSub.v Line: 5
+    Warning (13410): Pin "Hex5[3]" is stuck at VCC File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/HW1/RCAddSub/RCAddSub.v Line: 5
+    Warning (13410): Pin "Hex5[4]" is stuck at VCC File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/HW1/RCAddSub/RCAddSub.v Line: 5
+    Warning (13410): Pin "Hex5[5]" is stuck at VCC File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/HW1/RCAddSub/RCAddSub.v Line: 5
+    Warning (13410): Pin "Hex3[0]" is stuck at VCC File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/HW1/RCAddSub/RCAddSub.v Line: 5
+    Warning (13410): Pin "Hex3[1]" is stuck at VCC File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/HW1/RCAddSub/RCAddSub.v Line: 5
+    Warning (13410): Pin "Hex3[2]" is stuck at VCC File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/HW1/RCAddSub/RCAddSub.v Line: 5
+    Warning (13410): Pin "Hex3[3]" is stuck at VCC File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/HW1/RCAddSub/RCAddSub.v Line: 5
+    Warning (13410): Pin "Hex3[4]" is stuck at VCC File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/HW1/RCAddSub/RCAddSub.v Line: 5
+    Warning (13410): Pin "Hex3[5]" is stuck at VCC File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/HW1/RCAddSub/RCAddSub.v Line: 5
+    Warning (13410): Pin "Hex1[0]" is stuck at VCC File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/HW1/RCAddSub/RCAddSub.v Line: 5
+    Warning (13410): Pin "Hex1[1]" is stuck at VCC File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/HW1/RCAddSub/RCAddSub.v Line: 5
+    Warning (13410): Pin "Hex1[2]" is stuck at VCC File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/HW1/RCAddSub/RCAddSub.v Line: 5
+    Warning (13410): Pin "Hex1[3]" is stuck at VCC File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/HW1/RCAddSub/RCAddSub.v Line: 5
+    Warning (13410): Pin "Hex1[4]" is stuck at VCC File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/HW1/RCAddSub/RCAddSub.v Line: 5
+    Warning (13410): Pin "Hex1[5]" is stuck at VCC File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/HW1/RCAddSub/RCAddSub.v Line: 5
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 20 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 86 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
-    Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 6 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4836 megabytes
-    Info: Processing ended: Sun Jan 24 14:48:37 2021
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:28
+    Info (21059): Implemented 48 output pins
+    Info (21061): Implemented 29 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 4837 megabytes
+    Info: Processing ended: Mon Jan 25 18:22:00 2021
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:34
 
 

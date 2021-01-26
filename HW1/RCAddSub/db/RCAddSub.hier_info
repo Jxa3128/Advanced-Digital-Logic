@@ -1,18 +1,61 @@
 |RCAddSub
 AddSub => C[0].IN1
-A[0] => A[0].IN1
-A[1] => A[1].IN1
-A[2] => A[2].IN1
-A[3] => A[3].IN1
-B[0] => Bb.IN0
-B[1] => Bb.IN0
-B[2] => Bb.IN0
-B[3] => Bb.IN0
-S[0] <= FAbehave:s0.port0
-S[1] <= FAbehave:s1.port0
-S[2] <= FAbehave:s2.port0
-S[3] <= FAbehave:s3.port0
-Cout <= FAbehave:s3.port1
+A[0] => A[0].IN2
+A[1] => A[1].IN2
+A[2] => A[2].IN2
+A[3] => A[3].IN2
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+S[0] << S[0].DB_MAX_OUTPUT_PORT_TYPE
+S[1] << S[1].DB_MAX_OUTPUT_PORT_TYPE
+S[2] << S[2].DB_MAX_OUTPUT_PORT_TYPE
+S[3] << S[3].DB_MAX_OUTPUT_PORT_TYPE
+Hex5[0] << BinToSevenSegment:d0.port1
+Hex5[1] << BinToSevenSegment:d0.port1
+Hex5[2] << BinToSevenSegment:d0.port1
+Hex5[3] << BinToSevenSegment:d0.port1
+Hex5[4] << BinToSevenSegment:d0.port1
+Hex5[5] << BinToSevenSegment:d0.port1
+Hex5[6] << BinToSevenSegment:d0.port1
+Hex4[0] << BinToSevenSegment:d0.port2
+Hex4[1] << BinToSevenSegment:d0.port2
+Hex4[2] << BinToSevenSegment:d0.port2
+Hex4[3] << BinToSevenSegment:d0.port2
+Hex4[4] << BinToSevenSegment:d0.port2
+Hex4[5] << BinToSevenSegment:d0.port2
+Hex4[6] << BinToSevenSegment:d0.port2
+Hex3[0] << BinToSevenSegment:d1.port1
+Hex3[1] << BinToSevenSegment:d1.port1
+Hex3[2] << BinToSevenSegment:d1.port1
+Hex3[3] << BinToSevenSegment:d1.port1
+Hex3[4] << BinToSevenSegment:d1.port1
+Hex3[5] << BinToSevenSegment:d1.port1
+Hex3[6] << BinToSevenSegment:d1.port1
+Hex2[0] << BinToSevenSegment:d1.port2
+Hex2[1] << BinToSevenSegment:d1.port2
+Hex2[2] << BinToSevenSegment:d1.port2
+Hex2[3] << BinToSevenSegment:d1.port2
+Hex2[4] << BinToSevenSegment:d1.port2
+Hex2[5] << BinToSevenSegment:d1.port2
+Hex2[6] << BinToSevenSegment:d1.port2
+Hex1[0] << BinToSevenSegment:d2.port1
+Hex1[1] << BinToSevenSegment:d2.port1
+Hex1[2] << BinToSevenSegment:d2.port1
+Hex1[3] << BinToSevenSegment:d2.port1
+Hex1[4] << BinToSevenSegment:d2.port1
+Hex1[5] << BinToSevenSegment:d2.port1
+Hex1[6] << BinToSevenSegment:d2.port1
+Hex0[0] << BinToSevenSegment:d2.port2
+Hex0[1] << BinToSevenSegment:d2.port2
+Hex0[2] << BinToSevenSegment:d2.port2
+Hex0[3] << BinToSevenSegment:d2.port2
+Hex0[4] << BinToSevenSegment:d2.port2
+Hex0[5] << BinToSevenSegment:d2.port2
+Hex0[6] << BinToSevenSegment:d2.port2
+OVR << OVR.DB_MAX_OUTPUT_PORT_TYPE
+Cout << FAbehave:s3.port1
 
 
 |RCAddSub|FAbehave:s0
@@ -45,5 +88,77 @@ cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
 a => Add0.IN1
 b => Add0.IN2
 cin => Add1.IN4
+
+
+|RCAddSub|BinToSevenSegment:d0
+value[0] => Decoder0.IN3
+value[0] => Decoder1.IN2
+value[1] => Decoder0.IN2
+value[1] => Decoder1.IN1
+value[2] => Decoder0.IN1
+value[2] => Decoder1.IN0
+value[3] => Decoder0.IN0
+left[0] <= <VCC>
+left[1] <= <VCC>
+left[2] <= <VCC>
+left[3] <= <VCC>
+left[4] <= <VCC>
+left[5] <= <VCC>
+left[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+right[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+right[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+right[2] <= right.DB_MAX_OUTPUT_PORT_TYPE
+right[3] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+right[4] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+right[5] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+right[6] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RCAddSub|BinToSevenSegment:d1
+value[0] => Decoder0.IN3
+value[0] => Decoder1.IN2
+value[1] => Decoder0.IN2
+value[1] => Decoder1.IN1
+value[2] => Decoder0.IN1
+value[2] => Decoder1.IN0
+value[3] => Decoder0.IN0
+left[0] <= <VCC>
+left[1] <= <VCC>
+left[2] <= <VCC>
+left[3] <= <VCC>
+left[4] <= <VCC>
+left[5] <= <VCC>
+left[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+right[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+right[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+right[2] <= right.DB_MAX_OUTPUT_PORT_TYPE
+right[3] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+right[4] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+right[5] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+right[6] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RCAddSub|BinToSevenSegment:d2
+value[0] => Decoder0.IN3
+value[0] => Decoder1.IN2
+value[1] => Decoder0.IN2
+value[1] => Decoder1.IN1
+value[2] => Decoder0.IN1
+value[2] => Decoder1.IN0
+value[3] => Decoder0.IN0
+left[0] <= <VCC>
+left[1] <= <VCC>
+left[2] <= <VCC>
+left[3] <= <VCC>
+left[4] <= <VCC>
+left[5] <= <VCC>
+left[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+right[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+right[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+right[2] <= right.DB_MAX_OUTPUT_PORT_TYPE
+right[3] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+right[4] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+right[5] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+right[6] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 
 
