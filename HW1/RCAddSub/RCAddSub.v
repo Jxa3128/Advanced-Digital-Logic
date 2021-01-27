@@ -64,7 +64,7 @@ module BinToSevenSegment (
 				
             4'b1010: begin left = 7'b0111111; right = 7'b0000010; end  //-6
 				
-            4'b1011: begin left = 7'b0111111; right = 7'b1110010; end  //-5
+            4'b1011: begin left = 7'b0111111; right = 7'b0010010; end  //-5
 				
             4'b1100: begin left = 7'b0111111; right = 7'b0011001; end  //-4
 				
