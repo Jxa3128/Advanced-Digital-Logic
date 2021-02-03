@@ -1,5 +1,5 @@
 Analysis & Synthesis report for KnightRiderFlasher
-Tue Feb 02 19:56:41 2021
+Wed Feb 03 12:03:15 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,7 +10,13 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -33,22 +39,27 @@ refer to the applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                              ;
-+-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Tue Feb 02 19:56:41 2021           ;
-; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Revision Name               ; KnightRiderFlasher                          ;
-; Top-level Entity Name       ; KnightRiderFlasher                          ;
-; Family                      ; Cyclone V                                   ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed Feb 03 12:03:15 2021       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; KnightRiderFlasher                          ;
+; Top-level Entity Name           ; KnightRiderFlasher                          ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 16                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -154,25 +165,137 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                   ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                     ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------+---------+
+; KnightRiderFlasher.v             ; yes             ; User Verilog HDL File  ; //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimate of Logic utilization (ALMs needed) ; 0     ;
+;                                             ;       ;
+; Combinational ALUT usage for logic          ; 0     ;
+;     -- 7 input functions                    ; 0     ;
+;     -- 6 input functions                    ; 0     ;
+;     -- 5 input functions                    ; 0     ;
+;     -- 4 input functions                    ; 0     ;
+;     -- <=3 input functions                  ; 0     ;
+;                                             ;       ;
+; Dedicated logic registers                   ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 16    ;
+;                                             ;       ;
+; Total DSP Blocks                            ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; clock ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 16    ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                           ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name        ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------------+--------------+
+; |KnightRiderFlasher        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 16   ; 0            ; |KnightRiderFlasher ; KnightRiderFlasher ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
+; boundary_port         ; 16                          ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Feb 02 19:56:27 2021
+    Info: Processing started: Wed Feb 03 12:02:59 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off KnightRiderFlasher -c KnightRiderFlasher
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file knightriderflasher.v
-    Info (12023): Found entity 1: KnightRiderFlasher File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 1
+Info (12021): Found 4 design units, including 4 entities, in source file knightriderflasher.v
+    Info (12023): Found entity 1: KnightRiderFlasher File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 6
+    Info (12023): Found entity 2: BinaryUpDown File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 47
+    Info (12023): Found entity 3: ToggleLatch File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 64
+    Info (12023): Found entity 4: divideX1000 File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 84
 Info (12127): Elaborating entity "KnightRiderFlasher" for the top level hierarchy
+Warning (10034): Output port "Aout" at KnightRiderFlasher.v(25) has no driver File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
+Warning (10034): Output port "Bout" at KnightRiderFlasher.v(25) has no driver File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
 Warning (12158): Entity "KnightRiderFlasher" contains only dangling pins
-Error (12061): Can't synthesize current design -- Top partition does not contain any logic
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 2 warnings
-    Error: Peak virtual memory: 4769 megabytes
-    Error: Processing ended: Tue Feb 02 19:56:42 2021
-    Error: Elapsed time: 00:00:15
-    Error: Total CPU time (on all processors): 00:00:25
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "Aout[6]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
+    Warning (13410): Pin "Aout[5]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
+    Warning (13410): Pin "Aout[4]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
+    Warning (13410): Pin "Aout[3]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
+    Warning (13410): Pin "Aout[2]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
+    Warning (13410): Pin "Aout[1]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
+    Warning (13410): Pin "Aout[0]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
+    Warning (13410): Pin "Bout[6]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
+    Warning (13410): Pin "Bout[5]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
+    Warning (13410): Pin "Bout[4]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
+    Warning (13410): Pin "Bout[3]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
+    Warning (13410): Pin "Bout[2]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
+    Warning (13410): Pin "Bout[1]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
+    Warning (13410): Pin "Bout[0]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clock" File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
+    Warning (15610): No output dependent on input pin "reset" File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
+Info (21057): Implemented 16 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 14 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 4803 megabytes
+    Info: Processing ended: Wed Feb 03 12:03:15 2021
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:26
 
 

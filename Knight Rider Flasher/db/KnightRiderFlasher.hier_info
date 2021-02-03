@@ -1,3 +1,19 @@
 |KnightRiderFlasher
+clock => ~NO_FANOUT~
+reset => ~NO_FANOUT~
+Aout[6] <= <GND>
+Aout[5] <= <GND>
+Aout[4] <= <GND>
+Aout[3] <= <GND>
+Aout[2] <= <GND>
+Aout[1] <= <GND>
+Aout[0] <= <GND>
+Bout[6] <= <GND>
+Bout[5] <= <GND>
+Bout[4] <= <GND>
+Bout[3] <= <GND>
+Bout[2] <= <GND>
+Bout[1] <= <GND>
+Bout[0] <= <GND>
 
 
