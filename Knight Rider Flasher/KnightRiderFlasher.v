@@ -17,29 +17,9 @@ module KnightRiderFlasher(
 	
 	
 	
-//	input OnOff,
-//	input ClockKey,
-//	output LEDRArray[9:0]);
-
-
-	input clock, reset, output [0:6] Aout, Bout);
+	input OnOff,
+	input ClockKey, output [9:0] LEDRArray);
 	
-	wire [3:0] A,B;
-	wire five, ten, k1, k0, sec0, sec1;
-	wire [3:0] count5, count10;
-	wire [9:0] count100L, count1000M;
-	
-	//instantiations
-	/*
-	divideX5 div5
-	(
-		.CLK(clock),
-		.CLEAR(reset),
-		.OUT(five),
-		.COUNT(count5)
-	
-	);
-	*/
 
 	
 endmodule
@@ -80,13 +60,31 @@ module ToggleLatch (
 endmodule
 
 
-// Divide by 1000 counter
-module divideX1000 ( 
+// One/Ninth across 50e6/9 => 55,555,555.55555555
+module divideX9 ( 
 	
 	input CLK, CLEAR,
 	output reg [9:0] COUNT,
 	output reg OUT);
-	parameter N=10'd1000;
+	parameter N=10'd55555555;
+		always @ (negedge CLK, negedge CLEAR)
+			if (CLEAR==1'b0) COUNT <= 10'b0; 
+			else
+			begin
+				if (COUNT == N-2'd2) begin OUT <= 1'b1; COUNT <= N-1'd1; end // Once COUNT = N-2 OUT = 1
+			else
+			if (COUNT == N-1'd1) begin OUT <=1'b0; COUNT <= 10'b0; end //Once COUNT = N-1 OUT=0
+				else begin OUT <= 1'b0; COUNT <= COUNT + 1'b1; end // COUNT is incremented
+			end 
+endmodule 
+
+// One/2*Ninth across 50e6/18 => 27,777,777.777777776
+module divideX18 ( 
+	
+	input CLK, CLEAR,
+	output reg [9:0] COUNT,
+	output reg OUT);
+	parameter N=10'd27777777;
 		always @ (negedge CLK, negedge CLEAR)
 			if (CLEAR==1'b0) COUNT <= 10'b0; 
 			else

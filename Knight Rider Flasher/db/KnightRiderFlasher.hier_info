@@ -1,19 +1,15 @@
 |KnightRiderFlasher
-clock => ~NO_FANOUT~
-reset => ~NO_FANOUT~
-Aout[6] <= <GND>
-Aout[5] <= <GND>
-Aout[4] <= <GND>
-Aout[3] <= <GND>
-Aout[2] <= <GND>
-Aout[1] <= <GND>
-Aout[0] <= <GND>
-Bout[6] <= <GND>
-Bout[5] <= <GND>
-Bout[4] <= <GND>
-Bout[3] <= <GND>
-Bout[2] <= <GND>
-Bout[1] <= <GND>
-Bout[0] <= <GND>
+OnOff => ~NO_FANOUT~
+ClockKey => ~NO_FANOUT~
+LEDRArray[0] <= <GND>
+LEDRArray[1] <= <GND>
+LEDRArray[2] <= <GND>
+LEDRArray[3] <= <GND>
+LEDRArray[4] <= <GND>
+LEDRArray[5] <= <GND>
+LEDRArray[6] <= <GND>
+LEDRArray[7] <= <GND>
+LEDRArray[8] <= <GND>
+LEDRArray[9] <= <GND>
 
 

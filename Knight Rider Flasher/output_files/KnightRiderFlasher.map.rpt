@@ -1,5 +1,5 @@
 Analysis & Synthesis report for KnightRiderFlasher
-Wed Feb 03 12:03:15 2021
+Wed Feb 03 17:03:56 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -42,14 +42,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Feb 03 12:03:15 2021       ;
+; Analysis & Synthesis Status     ; Successful - Wed Feb 03 17:03:56 2021       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; KnightRiderFlasher                          ;
 ; Top-level Entity Name           ; KnightRiderFlasher                          ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 16                                          ;
+; Total pins                      ; 12                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -190,13 +190,13 @@ refer to the applicable agreement for further details.
 ;                                             ;       ;
 ; Dedicated logic registers                   ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 16    ;
+; I/O pins                                    ; 12    ;
 ;                                             ;       ;
 ; Total DSP Blocks                            ; 0     ;
 ;                                             ;       ;
-; Maximum fan-out node                        ; clock ;
+; Maximum fan-out node                        ; OnOff ;
 ; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 16    ;
+; Total fan-out                               ; 12    ;
 ; Average fan-out                             ; 0.50  ;
 +---------------------------------------------+-------+
 
@@ -206,7 +206,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name        ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------------+--------------+
-; |KnightRiderFlasher        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 16   ; 0            ; |KnightRiderFlasher ; KnightRiderFlasher ; work         ;
+; |KnightRiderFlasher        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 12   ; 0            ; |KnightRiderFlasher ; KnightRiderFlasher ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -234,7 +234,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; arriav_lcell_comb     ; 1                           ;
 ;     normal            ; 1                           ;
 ;         0 data inputs ; 1                           ;
-; boundary_port         ; 16                          ;
+; boundary_port         ; 12                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 0.00                        ;
 ; Average LUT depth     ; 0.00                        ;
@@ -256,45 +256,43 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Feb 03 12:02:59 2021
+    Info: Processing started: Wed Feb 03 17:03:40 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off KnightRiderFlasher -c KnightRiderFlasher
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
-Info (12021): Found 4 design units, including 4 entities, in source file knightriderflasher.v
+Warning (10229): Verilog HDL Expression warning at KnightRiderFlasher.v(69): truncated literal to match 10 bits File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 69
+Warning (10229): Verilog HDL Expression warning at KnightRiderFlasher.v(87): truncated literal to match 10 bits File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 87
+Info (12021): Found 5 design units, including 5 entities, in source file knightriderflasher.v
     Info (12023): Found entity 1: KnightRiderFlasher File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 6
-    Info (12023): Found entity 2: BinaryUpDown File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 47
-    Info (12023): Found entity 3: ToggleLatch File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 64
-    Info (12023): Found entity 4: divideX1000 File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 84
+    Info (12023): Found entity 2: BinaryUpDown File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 27
+    Info (12023): Found entity 3: ToggleLatch File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 44
+    Info (12023): Found entity 4: divideX9 File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 64
+    Info (12023): Found entity 5: divideX18 File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 82
 Info (12127): Elaborating entity "KnightRiderFlasher" for the top level hierarchy
-Warning (10034): Output port "Aout" at KnightRiderFlasher.v(25) has no driver File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
-Warning (10034): Output port "Bout" at KnightRiderFlasher.v(25) has no driver File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
+Warning (10034): Output port "LEDRArray" at KnightRiderFlasher.v(21) has no driver File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 21
 Warning (12158): Entity "KnightRiderFlasher" contains only dangling pins
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "Aout[6]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
-    Warning (13410): Pin "Aout[5]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
-    Warning (13410): Pin "Aout[4]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
-    Warning (13410): Pin "Aout[3]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
-    Warning (13410): Pin "Aout[2]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
-    Warning (13410): Pin "Aout[1]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
-    Warning (13410): Pin "Aout[0]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
-    Warning (13410): Pin "Bout[6]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
-    Warning (13410): Pin "Bout[5]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
-    Warning (13410): Pin "Bout[4]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
-    Warning (13410): Pin "Bout[3]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
-    Warning (13410): Pin "Bout[2]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
-    Warning (13410): Pin "Bout[1]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
-    Warning (13410): Pin "Bout[0]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
+    Warning (13410): Pin "LEDRArray[0]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 21
+    Warning (13410): Pin "LEDRArray[1]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 21
+    Warning (13410): Pin "LEDRArray[2]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 21
+    Warning (13410): Pin "LEDRArray[3]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 21
+    Warning (13410): Pin "LEDRArray[4]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 21
+    Warning (13410): Pin "LEDRArray[5]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 21
+    Warning (13410): Pin "LEDRArray[6]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 21
+    Warning (13410): Pin "LEDRArray[7]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 21
+    Warning (13410): Pin "LEDRArray[8]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 21
+    Warning (13410): Pin "LEDRArray[9]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 21
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clock" File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
-    Warning (15610): No output dependent on input pin "reset" File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 25
-Info (21057): Implemented 16 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "OnOff" File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 20
+    Warning (15610): No output dependent on input pin "ClockKey" File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 21
+Info (21057): Implemented 12 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 14 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
-    Info: Peak virtual memory: 4803 megabytes
-    Info: Processing ended: Wed Feb 03 12:03:15 2021
+    Info (21059): Implemented 10 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
+    Info: Peak virtual memory: 4794 megabytes
+    Info: Processing ended: Wed Feb 03 17:03:56 2021
     Info: Elapsed time: 00:00:16
     Info: Total CPU time (on all processors): 00:00:26
 
