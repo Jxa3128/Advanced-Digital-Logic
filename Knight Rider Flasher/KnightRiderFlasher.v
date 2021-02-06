@@ -25,15 +25,17 @@ module KnightRiderFlasher(
 	
 	divideX d(clock_toggle,clock_final);
 	
-	UpDownCounter udc(clock_final,0,OnOff,LEDRArray);
+	UpDownCounter udc(clock_final,direction,OnOff,ledNumber);
 	
 	always @ (ledNumber)
 		begin
-			if(ledNumber <= 0)
+			if(ledNumber <= 1)
 			  direction = 0;
 			if(ledNumber >= 9)
 				direction = 1;
 		end
+		
+	decoder2N d2n(ledNumber,clock_toggle,LEDRArray);
 	
 endmodule
 
@@ -95,8 +97,8 @@ module UpDownCounter(
 endmodule
 
 //N to 2**N decoder - Bill Carroll's
-moduledecoder2N #(parameterN = 4) 
+module decoder2N #(parameter N = 4) 
 	(input[N-1:0] in,
 	input enable,output[2**N-1:0] out);
-	assignout = (enable) ? (1 << in) : 0;
+	assign out = (enable) ? (1 << in) : 0;
 endmodule

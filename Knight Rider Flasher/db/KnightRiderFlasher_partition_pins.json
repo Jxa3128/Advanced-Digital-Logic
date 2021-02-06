@@ -20,6 +20,30 @@
 					"strict" : false
 				},
 				{
+					"name" : "LEDRArray[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDRArray[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDRArray[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDRArray[7]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDRArray[8]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDRArray[9]",
+					"strict" : false
+				},
+				{
 					"name" : "OnOff",
 					"strict" : false
 				},
