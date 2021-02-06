@@ -12,11 +12,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "Clock50",
+					"name" : "LEDRArray[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDRArray[3]",
 					"strict" : false
 				},
 				{
 					"name" : "OnOff",
+					"strict" : false
+				},
+				{
+					"name" : "Clock50",
 					"strict" : false
 				}
 			]

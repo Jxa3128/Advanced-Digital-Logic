@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Sat Feb 06 16:02:08 2021
+Analysis & Synthesis Status : Successful - Sat Feb 06 16:17:22 2021
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : KnightRiderFlasher
 Top-level Entity Name : KnightRiderFlasher
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 27
+Total registers : 31
 Total pins : 12
 Total virtual pins : 0
 Total block memory bits : 0

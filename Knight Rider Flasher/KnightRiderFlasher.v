@@ -18,14 +18,22 @@ module KnightRiderFlasher(
 
 	wire clock_toggle;
 	wire clock_final;
+	reg direction = 0; //direction where it will start
+	wire [3:0] ledNumber;
 
 	ToggleLatch toggy (OnOff,Clock50,clock_toggle);
 	
-	assign LEDRArray[0] = clock_toggle;
-	
 	divideX d(clock_toggle,clock_final);
 	
-	assign LEDRArray[1] = clock_final;
+	UpDownCounter udc(clock_final,0,OnOff,LEDRArray);
+	
+	always @ (ledNumber)
+		begin
+			if(ledNumber <= 0)
+			  direction = 0;
+			if(ledNumber >= 9)
+				direction = 1;
+		end
 	
 endmodule
 
@@ -74,7 +82,7 @@ module UpDownCounter(
 	
 	input CLK, UP, clr,
 	output reg [N-1:0] COUNT);
-	parameter N = 10;
+	parameter N = 4;
 		always @ (posedge CLK, negedge clr)
 				if(clr == 0)
 					COUNT <= 0; //clear this b
@@ -84,4 +92,11 @@ module UpDownCounter(
 					else 
 						COUNT <= COUNT - 1;
 					
+endmodule
+
+//N to 2**N decoder - Bill Carroll's
+moduledecoder2N #(parameterN = 4) 
+	(input[N-1:0] in,
+	input enable,output[2**N-1:0] out);
+	assignout = (enable) ? (1 << in) : 0;
 endmodule
