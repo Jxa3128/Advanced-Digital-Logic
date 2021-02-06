@@ -1,0 +1,275 @@
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
+
+// DATE "02/04/2021 22:19:23"
+
+// 
+// Device: Altera 5CSEMA5F31C6 Package FBGA896
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module KnightRiderFlasher (
+	OnOff,
+	ClockKey,
+	LEDRArray);
+input 	OnOff;
+input 	ClockKey;
+output 	[9:0] LEDRArray;
+
+// Design Ports Information
+// OnOff	=>  Location: PIN_AG8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ClockKey	=>  Location: PIN_AF14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// LEDRArray[0]	=>  Location: PIN_AF18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// LEDRArray[1]	=>  Location: PIN_E3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// LEDRArray[2]	=>  Location: PIN_AC20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// LEDRArray[3]	=>  Location: PIN_AG27,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// LEDRArray[4]	=>  Location: PIN_AD20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// LEDRArray[5]	=>  Location: PIN_AD29,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// LEDRArray[6]	=>  Location: PIN_AA26,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// LEDRArray[7]	=>  Location: PIN_H7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// LEDRArray[8]	=>  Location: PIN_AK4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// LEDRArray[9]	=>  Location: PIN_Y21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \OnOff~input_o ;
+wire \ClockKey~input_o ;
+wire \~QUARTUS_CREATED_GND~I_combout ;
+
+
+// Location: IOOBUF_X50_Y0_N59
+cyclonev_io_obuf \LEDRArray[0]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(LEDRArray[0]),
+	.obar());
+// synopsys translate_off
+defparam \LEDRArray[0]~output .bus_hold = "false";
+defparam \LEDRArray[0]~output .open_drain_output = "false";
+defparam \LEDRArray[0]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X8_Y81_N36
+cyclonev_io_obuf \LEDRArray[1]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(LEDRArray[1]),
+	.obar());
+// synopsys translate_off
+defparam \LEDRArray[1]~output .bus_hold = "false";
+defparam \LEDRArray[1]~output .open_drain_output = "false";
+defparam \LEDRArray[1]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X76_Y0_N2
+cyclonev_io_obuf \LEDRArray[2]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(LEDRArray[2]),
+	.obar());
+// synopsys translate_off
+defparam \LEDRArray[2]~output .bus_hold = "false";
+defparam \LEDRArray[2]~output .open_drain_output = "false";
+defparam \LEDRArray[2]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y4_N79
+cyclonev_io_obuf \LEDRArray[3]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(LEDRArray[3]),
+	.obar());
+// synopsys translate_off
+defparam \LEDRArray[3]~output .bus_hold = "false";
+defparam \LEDRArray[3]~output .open_drain_output = "false";
+defparam \LEDRArray[3]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X82_Y0_N42
+cyclonev_io_obuf \LEDRArray[4]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(LEDRArray[4]),
+	.obar());
+// synopsys translate_off
+defparam \LEDRArray[4]~output .bus_hold = "false";
+defparam \LEDRArray[4]~output .open_drain_output = "false";
+defparam \LEDRArray[4]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y23_N56
+cyclonev_io_obuf \LEDRArray[5]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(LEDRArray[5]),
+	.obar());
+// synopsys translate_off
+defparam \LEDRArray[5]~output .bus_hold = "false";
+defparam \LEDRArray[5]~output .open_drain_output = "false";
+defparam \LEDRArray[5]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y23_N5
+cyclonev_io_obuf \LEDRArray[6]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(LEDRArray[6]),
+	.obar());
+// synopsys translate_off
+defparam \LEDRArray[6]~output .bus_hold = "false";
+defparam \LEDRArray[6]~output .open_drain_output = "false";
+defparam \LEDRArray[6]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X16_Y81_N19
+cyclonev_io_obuf \LEDRArray[7]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(LEDRArray[7]),
+	.obar());
+// synopsys translate_off
+defparam \LEDRArray[7]~output .bus_hold = "false";
+defparam \LEDRArray[7]~output .open_drain_output = "false";
+defparam \LEDRArray[7]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X22_Y0_N53
+cyclonev_io_obuf \LEDRArray[8]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(LEDRArray[8]),
+	.obar());
+// synopsys translate_off
+defparam \LEDRArray[8]~output .bus_hold = "false";
+defparam \LEDRArray[8]~output .open_drain_output = "false";
+defparam \LEDRArray[8]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y6_N22
+cyclonev_io_obuf \LEDRArray[9]~output (
+	.i(gnd),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(LEDRArray[9]),
+	.obar());
+// synopsys translate_off
+defparam \LEDRArray[9]~output .bus_hold = "false";
+defparam \LEDRArray[9]~output .open_drain_output = "false";
+defparam \LEDRArray[9]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X8_Y0_N52
+cyclonev_io_ibuf \OnOff~input (
+	.i(OnOff),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\OnOff~input_o ));
+// synopsys translate_off
+defparam \OnOff~input .bus_hold = "false";
+defparam \OnOff~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X32_Y0_N1
+cyclonev_io_ibuf \ClockKey~input (
+	.i(ClockKey),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\ClockKey~input_o ));
+// synopsys translate_off
+defparam \ClockKey~input .bus_hold = "false";
+defparam \ClockKey~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X19_Y28_N0
+cyclonev_lcell_comb \~QUARTUS_CREATED_GND~I (
+// Equation(s):
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\~QUARTUS_CREATED_GND~I_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \~QUARTUS_CREATED_GND~I .extended_lut = "off";
+defparam \~QUARTUS_CREATED_GND~I .lut_mask = 64'h0000000000000000;
+defparam \~QUARTUS_CREATED_GND~I .shared_arith = "off";
+// synopsys translate_on
+
+endmodule

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for KnightRiderFlasher
-Wed Feb 03 17:03:56 2021
+Sat Feb 06 12:12:27 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,10 +13,14 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. General Register Statistics
+ 10. Parameter Settings for User Entity Instance: ToggleLatch:tl
+ 11. Parameter Settings for User Entity Instance: divideX4_5:fn1
+ 12. Port Connectivity Checks: "divideX4_5:fn1"
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -42,17 +46,17 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Feb 03 17:03:56 2021       ;
+; Analysis & Synthesis Status     ; Successful - Sat Feb 06 12:12:27 2021       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; KnightRiderFlasher                          ;
 ; Top-level Entity Name           ; KnightRiderFlasher                          ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
+; Total registers                 ; 1                                           ;
 ; Total pins                      ; 12                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
+; Total DSP Blocks                ; 1                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
@@ -158,10 +162,11 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -174,41 +179,54 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimate of Logic utilization (ALMs needed) ; 0     ;
-;                                             ;       ;
-; Combinational ALUT usage for logic          ; 0     ;
-;     -- 7 input functions                    ; 0     ;
-;     -- 6 input functions                    ; 0     ;
-;     -- 5 input functions                    ; 0     ;
-;     -- 4 input functions                    ; 0     ;
-;     -- <=3 input functions                  ; 0     ;
-;                                             ;       ;
-; Dedicated logic registers                   ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 12    ;
-;                                             ;       ;
-; Total DSP Blocks                            ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; OnOff ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 12    ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
++--------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                        ;
++---------------------------------------------+----------------------+
+; Resource                                    ; Usage                ;
++---------------------------------------------+----------------------+
+; Estimate of Logic utilization (ALMs needed) ; 1                    ;
+;                                             ;                      ;
+; Combinational ALUT usage for logic          ; 1                    ;
+;     -- 7 input functions                    ; 0                    ;
+;     -- 6 input functions                    ; 0                    ;
+;     -- 5 input functions                    ; 0                    ;
+;     -- 4 input functions                    ; 0                    ;
+;     -- <=3 input functions                  ; 1                    ;
+;                                             ;                      ;
+; Dedicated logic registers                   ; 1                    ;
+;                                             ;                      ;
+; I/O pins                                    ; 12                   ;
+;                                             ;                      ;
+; Total DSP Blocks                            ; 1                    ;
+;                                             ;                      ;
+; Maximum fan-out node                        ; ToggleLatch:tl|state ;
+; Maximum fan-out                             ; 2                    ;
+; Total fan-out                               ; 18                   ;
+; Average fan-out                             ; 0.67                 ;
++---------------------------------------------+----------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                           ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name        ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------------+--------------+
-; |KnightRiderFlasher        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 12   ; 0            ; |KnightRiderFlasher ; KnightRiderFlasher ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                          ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Entity Name        ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+--------------------+--------------+
+; |KnightRiderFlasher        ; 1 (0)               ; 1 (0)                     ; 0                 ; 1          ; 12   ; 0            ; |KnightRiderFlasher                ; KnightRiderFlasher ; work         ;
+;    |ToggleLatch:tl|        ; 1 (1)               ; 1 (1)                     ; 0                 ; 1          ; 0    ; 0            ; |KnightRiderFlasher|ToggleLatch:tl ; ToggleLatch        ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary  ;
++---------------------------------+-------------+
+; Statistic                       ; Number Used ;
++---------------------------------+-------------+
+; Independent 9x9                 ; 1           ;
+; Total number of DSP blocks      ; 1           ;
+;                                 ;             ;
+; Fixed Point Unsigned Multiplier ; 1           ;
++---------------------------------+-------------+
 
 
 +------------------------------------------------------+
@@ -216,7 +234,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 1     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -226,18 +244,52 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ToggleLatch:tl ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; ON             ; 1     ; Signed Integer                     ;
+; OFF            ; 0     ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divideX4_5:fn1 ;
++----------------+---------+----------------------------------+
+; Parameter Name ; Value   ; Type                             ;
++----------------+---------+----------------------------------+
+; N              ; 2500000 ; Signed Integer                   ;
++----------------+---------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divideX4_5:fn1"                                                                     ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; OUT  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 1                           ;
-;     normal            ; 1                           ;
+; arriav_ff             ; 1                           ;
+;     plain             ; 1                           ;
+; arriav_lcell_comb     ; 2                           ;
+;     normal            ; 2                           ;
 ;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
+; arriav_mac            ; 1                           ;
 ; boundary_port         ; 12                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 1.00                        ;
+; Average LUT depth     ; 0.33                        ;
 +-----------------------+-----------------------------+
 
 
@@ -246,7 +298,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -256,44 +308,48 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Feb 03 17:03:40 2021
+    Info: Processing started: Sat Feb 06 12:12:08 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off KnightRiderFlasher -c KnightRiderFlasher
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
-Warning (10229): Verilog HDL Expression warning at KnightRiderFlasher.v(69): truncated literal to match 10 bits File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 69
-Warning (10229): Verilog HDL Expression warning at KnightRiderFlasher.v(87): truncated literal to match 10 bits File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 87
-Info (12021): Found 5 design units, including 5 entities, in source file knightriderflasher.v
+Warning (10229): Verilog HDL Expression warning at KnightRiderFlasher.v(107): truncated literal to match 24 bits File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 107
+Warning (10229): Verilog HDL Expression warning at KnightRiderFlasher.v(125): truncated literal to match 24 bits File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 125
+Info (12021): Found 7 design units, including 7 entities, in source file knightriderflasher.v
     Info (12023): Found entity 1: KnightRiderFlasher File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 6
-    Info (12023): Found entity 2: BinaryUpDown File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 27
-    Info (12023): Found entity 3: ToggleLatch File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 44
-    Info (12023): Found entity 4: divideX9 File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 64
-    Info (12023): Found entity 5: divideX18 File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 82
+    Info (12023): Found entity 2: DecadeUpDown File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 40
+    Info (12023): Found entity 3: ToggleLatch File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 55
+    Info (12023): Found entity 4: divideX4_5 File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 76
+    Info (12023): Found entity 5: divideX9 File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 102
+    Info (12023): Found entity 6: divideX18 File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 120
+    Info (12023): Found entity 7: div6 File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 138
 Info (12127): Elaborating entity "KnightRiderFlasher" for the top level hierarchy
-Warning (10034): Output port "LEDRArray" at KnightRiderFlasher.v(21) has no driver File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 21
-Warning (12158): Entity "KnightRiderFlasher" contains only dangling pins
+Warning (10034): Output port "LEDRArray[8..0]" at KnightRiderFlasher.v(22) has no driver File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 22
+Info (12128): Elaborating entity "ToggleLatch" for hierarchy "ToggleLatch:tl" File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 28
+Warning (10230): Verilog HDL assignment warning at KnightRiderFlasher.v(66): truncated value with size 32 to match size of target (1) File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 66
+Warning (10230): Verilog HDL assignment warning at KnightRiderFlasher.v(67): truncated value with size 32 to match size of target (1) File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 67
+Info (12128): Elaborating entity "divideX4_5" for hierarchy "divideX4_5:fn1" File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 33
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDRArray[0]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 21
-    Warning (13410): Pin "LEDRArray[1]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 21
-    Warning (13410): Pin "LEDRArray[2]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 21
-    Warning (13410): Pin "LEDRArray[3]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 21
-    Warning (13410): Pin "LEDRArray[4]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 21
-    Warning (13410): Pin "LEDRArray[5]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 21
-    Warning (13410): Pin "LEDRArray[6]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 21
-    Warning (13410): Pin "LEDRArray[7]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 21
-    Warning (13410): Pin "LEDRArray[8]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 21
-    Warning (13410): Pin "LEDRArray[9]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 21
+    Warning (13410): Pin "LEDRArray[0]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 22
+    Warning (13410): Pin "LEDRArray[1]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 22
+    Warning (13410): Pin "LEDRArray[2]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 22
+    Warning (13410): Pin "LEDRArray[3]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 22
+    Warning (13410): Pin "LEDRArray[4]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 22
+    Warning (13410): Pin "LEDRArray[5]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 22
+    Warning (13410): Pin "LEDRArray[6]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 22
+    Warning (13410): Pin "LEDRArray[7]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 22
+    Warning (13410): Pin "LEDRArray[8]" is stuck at GND File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 22
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "OnOff" File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 20
-    Warning (15610): No output dependent on input pin "ClockKey" File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 21
-Info (21057): Implemented 12 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 14 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 10 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 4794 megabytes
-    Info: Processing ended: Wed Feb 03 17:03:56 2021
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:26
+    Info (21061): Implemented 1 logic cells
+    Info (21062): Implemented 1 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
+    Info: Peak virtual memory: 4857 megabytes
+    Info: Processing ended: Sat Feb 06 12:12:27 2021
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:29
 
 

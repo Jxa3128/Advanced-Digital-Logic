@@ -2,7 +2,20 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "LEDRArray[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ClockKey",
+					"strict" : false
+				},
+				{
+					"name" : "OnOff",
+					"strict" : false
+				}
+			]
 		}
 	]
 }

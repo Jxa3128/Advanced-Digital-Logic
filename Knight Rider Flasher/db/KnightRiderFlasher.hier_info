@@ -1,15 +1,58 @@
 |KnightRiderFlasher
-OnOff => ~NO_FANOUT~
-ClockKey => ~NO_FANOUT~
-LEDRArray[0] <= <GND>
-LEDRArray[1] <= <GND>
-LEDRArray[2] <= <GND>
-LEDRArray[3] <= <GND>
-LEDRArray[4] <= <GND>
-LEDRArray[5] <= <GND>
-LEDRArray[6] <= <GND>
-LEDRArray[7] <= <GND>
-LEDRArray[8] <= <GND>
-LEDRArray[9] <= <GND>
+OnOff => OnOff.IN1
+ClockKey => ClockKey.IN2
+LEDRArray[0] << <GND>
+LEDRArray[1] << <GND>
+LEDRArray[2] << <GND>
+LEDRArray[3] << <GND>
+LEDRArray[4] << <GND>
+LEDRArray[5] << <GND>
+LEDRArray[6] << <GND>
+LEDRArray[7] << <GND>
+LEDRArray[8] << <GND>
+LEDRArray[9] << ToggleLatch:tl.port2
+
+
+|KnightRiderFlasher|ToggleLatch:tl
+OnOff => state.CLK
+IN => Mult0.IN0
+OUT <= Mult0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KnightRiderFlasher|divideX4_5:fn1
+CLK => COUNT[0].CLK
+CLK => COUNT[1].CLK
+CLK => COUNT[2].CLK
+CLK => COUNT[3].CLK
+CLK => COUNT[4].CLK
+CLK => COUNT[5].CLK
+CLK => COUNT[6].CLK
+CLK => COUNT[7].CLK
+CLK => COUNT[8].CLK
+CLK => COUNT[9].CLK
+CLK => COUNT[10].CLK
+CLK => COUNT[11].CLK
+CLK => COUNT[12].CLK
+CLK => COUNT[13].CLK
+CLK => COUNT[14].CLK
+CLK => COUNT[15].CLK
+CLK => COUNT[16].CLK
+CLK => COUNT[17].CLK
+CLK => COUNT[18].CLK
+CLK => COUNT[19].CLK
+CLK => COUNT[20].CLK
+CLK => COUNT[21].CLK
+CLK => COUNT[22].CLK
+CLK => COUNT[23].CLK
+CLK => COUNT[24].CLK
+CLK => COUNT[25].CLK
+CLK => COUNT[26].CLK
+CLK => COUNT[27].CLK
+CLK => COUNT[28].CLK
+CLK => COUNT[29].CLK
+CLK => COUNT[30].CLK
+CLK => COUNT[31].CLK
+CLK => OUT~reg0.CLK
+OUT <= OUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
