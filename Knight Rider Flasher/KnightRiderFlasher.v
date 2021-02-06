@@ -5,7 +5,6 @@
 //This acts as the main code where everything will be called
 module KnightRiderFlasher(
 
-
 	// I will need CLOCK_50 -> PIN_AF14 
 	// On/Off Toggle Module
 	// Clock Divider 
@@ -13,49 +12,21 @@ module KnightRiderFlasher(
 	// Module Instantiation
 	// Pin Assignment -> The 0:9 LEDR on the DE1-Soc board
 	
-	
-	
-	
-	
 	input OnOff, //key1
-	input ClockKey, //clock_50
+	input Clock50, //clock_50
 	output [9:0] LEDRArray); //the 10 LEDR
 
+	wire clock_toggle;
+	wire clock_final;
 
-	//input wires from the schematic
-	wire divisor;
-	wire en;
-	wire [3:0] bufferCounter;
+	ToggleLatch toggy (OnOff,Clock50,clock_toggle);
 	
-	ToggleLatch tl (OnOff, ClockKey, en);
+	assign LEDRArray[0] = clock_toggle;
 	
-	//CLOCK_50 && Divisor Input 
-	// this tells me if it is a 1 or a 0
-	//since we need an output every 10 clocks
+	divideX d(clock_toggle,clock_final);
 	
-	//call it 3 diff times for the report
-	divideX4_5 fn1 (ClockKey,divisor);
-	//divideX9 fn1 (ClockKey,divisor);
-	//divideX18 fn1 (ClockKey,divisor);
+	assign LEDRArray[1] = clock_final;
 	
-	
-	//decade counter is called
-	DecadeUpDown DU1 (divisor, OnOff, leftRight, bufferCounter);
-	
-endmodule
-
-//lets assume this bit is right
-module DecadeUpDown(
-	
-	input CLK, UP,
-	output reg [N-1:0] COUNT);
-	parameter N = 4'd10;
-		always @ (posedge CLK)
-				if(UP == 0)
-					COUNT <= COUNT + 4'd1;
-				else 
-					COUNT <= COUNT + 4'd1;
-					
 endmodule
 
 
@@ -76,81 +47,41 @@ module ToggleLatch (
 					//CLR turns the switch off.
 					//Pushing OnOff turns the switch on. //Pushing OnOff turns the switch off.
 					endcase
-	assign OUT = state*IN; //Out = In when switch in on. Otherwise, Out = 0.
+	assign OUT = state&IN; //Out = In when switch in on. Otherwise, Out = 0.
 	
 endmodule
 
-//twice per second
-module divideX4_5 ( 
-	
+module divideX (
 	input CLK,
 	output reg OUT);
-	parameter N= 2500000; //(50e6/10LED)/2
-		reg [31:0] COUNT;
-		always @ (negedge CLK)
-			begin
-			if (COUNT == N-2) 
-				begin 
-					OUT <= 1; 
-					COUNT <= N-1; end 
-			else
-			if (COUNT == N-1) 
-				begin 
-					OUT <=1'b0; 
-					COUNT <= 0; end 
-			else 
-				begin 
-					OUT <= 0; 
-					COUNT <= COUNT + 1; end 
-			end 
-endmodule 
+	
+	parameter N = 5000000;	
+	reg [31:0] count;								//32bit register
+	
+	always @ (negedge CLK)
+	begin
+		count = count + 1;						//increment 
+		if(count >= (N-1))
+			count = 0;								//reset counter
+		if(count < (N/2)) 	
+			OUT = 1;
+		else
+			OUT=0;
+	end
+endmodule
 
-// once per second
-module divideX9 ( 
+module UpDownCounter(
 	
-	input CLK,
-	output reg OUT);
-	parameter N= 5000000; //(50e6)/10LEDR
-		reg [31:0] COUNT;
-		always @ (negedge CLK)
-			begin
-			if (COUNT == N-2) 
-				begin 
-					OUT <= 1; 
-					COUNT <= N-1; end 
-			else
-			if (COUNT == N-1) 
-				begin 
-					OUT <=1'b0; 
-					COUNT <= 0; end 
-			else 
-				begin 
-					OUT <= 0; 
-					COUNT <= COUNT + 1; end 
-			end 
-endmodule 
-
-// once per twice a second
-module divideX18 ( 
-	
-	input CLK,
-	output reg OUT);
-	parameter N= 100000000; //(50e6/10LED)*2
-		reg [31:0] COUNT;
-		always @ (negedge CLK)
-			begin
-			if (COUNT == N-2) 
-				begin 
-					OUT <= 1; 
-					COUNT <= N-1; end 
-			else
-			if (COUNT == N-1) 
-				begin 
-					OUT <=1'b0; 
-					COUNT <= 0; end 
-			else 
-				begin 
-					OUT <= 0; 
-					COUNT <= COUNT + 1; end 
-			end 
-endmodule 
+	input CLK, UP, clr,
+	output reg [N-1:0] COUNT);
+	parameter N = 10;
+		always @ (posedge CLK, negedge clr)
+				if(clr == 0)
+					COUNT <= 0; //clear this b
+				else
+					if (UP == 0)
+						COUNT <= COUNT + 1;
+					else 
+						COUNT <= COUNT - 1;
+					
+endmodule

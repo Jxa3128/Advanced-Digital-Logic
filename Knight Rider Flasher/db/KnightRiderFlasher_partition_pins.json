@@ -4,11 +4,15 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "LEDRArray[9]",
+					"name" : "LEDRArray[0]",
 					"strict" : false
 				},
 				{
-					"name" : "ClockKey",
+					"name" : "LEDRArray[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Clock50",
 					"strict" : false
 				},
 				{
