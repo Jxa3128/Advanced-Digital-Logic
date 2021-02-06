@@ -65,14 +65,16 @@ module divideX (
 	input CLK,
 	output reg OUT);
 	
-	parameter N = 5000000;	
-	reg [31:0] count;								//32bit register
+	//parameter N = 5000000;
+	//parameter N = 2500000;
+	parameter N = 10000000;	
+	reg [31:0] count;								
 	
 	always @ (negedge CLK)
 	begin
-		count = count + 1;						//increment 
+		count = count + 1;						
 		if(count >= (N-1))
-			count = 0;								//reset counter
+			count = 0;								
 		if(count < (N/2)) 	
 			OUT = 1;
 		else

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for KnightRiderFlasher
-Sat Feb 06 16:48:05 2021
+Sat Feb 06 17:05:14 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -50,7 +50,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Feb 06 16:48:05 2021       ;
+; Analysis & Synthesis Status     ; Successful - Sat Feb 06 17:05:14 2021       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; KnightRiderFlasher                          ;
 ; Top-level Entity Name           ; KnightRiderFlasher                          ;
@@ -170,8 +170,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-8         ;   0.0%      ;
+;     Processors 2-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -189,14 +188,14 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Estimate of Logic utilization (ALMs needed) ; 40                    ;
+; Estimate of Logic utilization (ALMs needed) ; 36                    ;
 ;                                             ;                       ;
-; Combinational ALUT usage for logic          ; 71                    ;
+; Combinational ALUT usage for logic          ; 64                    ;
 ;     -- 7 input functions                    ; 0                     ;
-;     -- 6 input functions                    ; 9                     ;
-;     -- 5 input functions                    ; 12                    ;
+;     -- 6 input functions                    ; 8                     ;
+;     -- 5 input functions                    ; 11                    ;
 ;     -- 4 input functions                    ; 6                     ;
-;     -- <=3 input functions                  ; 44                    ;
+;     -- <=3 input functions                  ; 39                    ;
 ;                                             ;                       ;
 ; Dedicated logic registers                   ; 31                    ;
 ;                                             ;                       ;
@@ -206,8 +205,8 @@ refer to the applicable agreement for further details.
 ;                                             ;                       ;
 ; Maximum fan-out node                        ; ToggleLatch:toggy|OUT ;
 ; Maximum fan-out                             ; 36                    ;
-; Total fan-out                               ; 366                   ;
-; Average fan-out                             ; 2.90                  ;
+; Total fan-out                               ; 343                   ;
+; Average fan-out                             ; 2.88                  ;
 +---------------------------------------------+-----------------------+
 
 
@@ -216,11 +215,11 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------+--------------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                   ; Entity Name        ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------+--------------------+--------------+
-; |KnightRiderFlasher        ; 71 (4)              ; 31 (0)                    ; 0                 ; 0          ; 12   ; 0            ; |KnightRiderFlasher                   ; KnightRiderFlasher ; work         ;
+; |KnightRiderFlasher        ; 64 (4)              ; 31 (0)                    ; 0                 ; 0          ; 12   ; 0            ; |KnightRiderFlasher                   ; KnightRiderFlasher ; work         ;
 ;    |ToggleLatch:toggy|     ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |KnightRiderFlasher|ToggleLatch:toggy ; ToggleLatch        ; work         ;
 ;    |UpDownCounter:udc|     ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |KnightRiderFlasher|UpDownCounter:udc ; UpDownCounter      ; work         ;
 ;    |decoder2N:d2n|         ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KnightRiderFlasher|decoder2N:d2n     ; decoder2N          ; work         ;
-;    |divideX:d|             ; 51 (51)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |KnightRiderFlasher|divideX:d         ; divideX            ; work         ;
+;    |divideX:d|             ; 44 (44)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |KnightRiderFlasher|divideX:d         ; divideX            ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -284,11 +283,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +--------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: divideX:d ;
-+----------------+---------+-----------------------------+
-; Parameter Name ; Value   ; Type                        ;
-+----------------+---------+-----------------------------+
-; N              ; 5000000 ; Signed Integer              ;
-+----------------+---------+-----------------------------+
++----------------+----------+----------------------------+
+; Parameter Name ; Value    ; Type                       ;
++----------------+----------+----------------------------+
+; N              ; 10000000 ; Signed Integer             ;
++----------------+----------+----------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -330,22 +329,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     CLR               ; 4                           ;
 ;     SLD               ; 26                          ;
 ;     plain             ; 1                           ;
-; arriav_lcell_comb     ; 74                          ;
+; arriav_lcell_comb     ; 67                          ;
 ;     arith             ; 26                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 25                          ;
-;     normal            ; 48                          ;
+;     normal            ; 41                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 5                           ;
-;         2 data inputs ; 8                           ;
-;         3 data inputs ; 7                           ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 5                           ;
 ;         4 data inputs ; 6                           ;
-;         5 data inputs ; 12                          ;
-;         6 data inputs ; 9                           ;
+;         5 data inputs ; 11                          ;
+;         6 data inputs ; 8                           ;
 ; boundary_port         ; 12                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.10                        ;
-; Average LUT depth     ; 4.60                        ;
+; Max LUT depth         ; 6.40                        ;
+; Average LUT depth     ; 4.75                        ;
 +-----------------------+-----------------------------+
 
 
@@ -364,7 +363,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Feb 06 16:47:42 2021
+    Info: Processing started: Sat Feb 06 17:04:51 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off KnightRiderFlasher -c KnightRiderFlasher
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -372,8 +371,8 @@ Info (12021): Found 5 design units, including 5 entities, in source file knightr
     Info (12023): Found entity 1: KnightRiderFlasher File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 6
     Info (12023): Found entity 2: ToggleLatch File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 44
     Info (12023): Found entity 3: divideX File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 64
-    Info (12023): Found entity 4: UpDownCounter File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 83
-    Info (12023): Found entity 5: decoder2N File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 100
+    Info (12023): Found entity 4: UpDownCounter File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 85
+    Info (12023): Found entity 5: decoder2N File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 102
 Info (12127): Elaborating entity "KnightRiderFlasher" for the top level hierarchy
 Warning (10240): Verilog HDL Always Construct warning at KnightRiderFlasher.v(30): inferring latch(es) for variable "direction", which holds its previous value in one or more paths through the always construct File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 30
 Info (10041): Inferred latch for "direction" at KnightRiderFlasher.v(34) File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 34
@@ -382,22 +381,22 @@ Warning (10230): Verilog HDL assignment warning at KnightRiderFlasher.v(55): tru
 Warning (10230): Verilog HDL assignment warning at KnightRiderFlasher.v(56): truncated value with size 32 to match size of target (1) File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 56
 Info (12128): Elaborating entity "divideX" for hierarchy "divideX:d" File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 26
 Info (12128): Elaborating entity "UpDownCounter" for hierarchy "UpDownCounter:udc" File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 28
-Warning (10230): Verilog HDL assignment warning at KnightRiderFlasher.v(93): truncated value with size 32 to match size of target (4) File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 93
 Warning (10230): Verilog HDL assignment warning at KnightRiderFlasher.v(95): truncated value with size 32 to match size of target (4) File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 95
+Warning (10230): Verilog HDL assignment warning at KnightRiderFlasher.v(97): truncated value with size 32 to match size of target (4) File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 97
 Info (12128): Elaborating entity "decoder2N" for hierarchy "decoder2N:d2n" File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 38
-Warning (10230): Verilog HDL assignment warning at KnightRiderFlasher.v(103): truncated value with size 32 to match size of target (16) File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 103
+Warning (10230): Verilog HDL assignment warning at KnightRiderFlasher.v(105): truncated value with size 32 to match size of target (16) File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/Knight Rider Flasher/KnightRiderFlasher.v Line: 105
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 108 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 101 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 10 output pins
-    Info (21061): Implemented 96 logic cells
+    Info (21061): Implemented 89 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4866 megabytes
-    Info: Processing ended: Sat Feb 06 16:48:05 2021
+    Info: Peak virtual memory: 4865 megabytes
+    Info: Processing ended: Sat Feb 06 17:05:14 2021
     Info: Elapsed time: 00:00:23
-    Info: Total CPU time (on all processors): 00:00:33
+    Info: Total CPU time (on all processors): 00:00:34
 
 

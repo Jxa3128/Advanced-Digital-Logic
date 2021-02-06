@@ -1,12 +1,12 @@
-Fitter Status : Successful - Sat Feb 06 16:48:57 2021
+Fitter Status : Successful - Sat Feb 06 17:06:07 2021
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : KnightRiderFlasher
 Top-level Entity Name : KnightRiderFlasher
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 41 / 32,070 ( < 1 % )
-Total registers : 35
+Logic utilization (in ALMs) : 36 / 32,070 ( < 1 % )
+Total registers : 31
 Total pins : 12 / 457 ( 3 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 4,065,280 ( 0 % )
