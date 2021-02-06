@@ -1,5 +1,5 @@
 Analysis & Synthesis report for KnightRiderFlasher
-Sat Feb 06 16:36:26 2021
+Sat Feb 06 16:48:05 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -50,7 +50,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Feb 06 16:36:26 2021       ;
+; Analysis & Synthesis Status     ; Successful - Sat Feb 06 16:48:05 2021       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; KnightRiderFlasher                          ;
 ; Top-level Entity Name           ; KnightRiderFlasher                          ;
@@ -170,7 +170,8 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -194,8 +195,8 @@ refer to the applicable agreement for further details.
 ;     -- 7 input functions                    ; 0                     ;
 ;     -- 6 input functions                    ; 9                     ;
 ;     -- 5 input functions                    ; 12                    ;
-;     -- 4 input functions                    ; 5                     ;
-;     -- <=3 input functions                  ; 45                    ;
+;     -- 4 input functions                    ; 6                     ;
+;     -- <=3 input functions                  ; 44                    ;
 ;                                             ;                       ;
 ; Dedicated logic registers                   ; 31                    ;
 ;                                             ;                       ;
@@ -205,7 +206,7 @@ refer to the applicable agreement for further details.
 ;                                             ;                       ;
 ; Maximum fan-out node                        ; ToggleLatch:toggy|OUT ;
 ; Maximum fan-out                             ; 36                    ;
-; Total fan-out                               ; 365                   ;
+; Total fan-out                               ; 366                   ;
 ; Average fan-out                             ; 2.90                  ;
 +---------------------------------------------+-----------------------+
 
@@ -337,8 +338,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 5                           ;
 ;         2 data inputs ; 8                           ;
-;         3 data inputs ; 8                           ;
-;         4 data inputs ; 5                           ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 6                           ;
 ;         5 data inputs ; 12                          ;
 ;         6 data inputs ; 9                           ;
 ; boundary_port         ; 12                          ;
@@ -363,7 +364,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Feb 06 16:36:03 2021
+    Info: Processing started: Sat Feb 06 16:47:42 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off KnightRiderFlasher -c KnightRiderFlasher
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -394,8 +395,8 @@ Info (21057): Implemented 108 device resources after synthesis - the final resou
     Info (21059): Implemented 10 output pins
     Info (21061): Implemented 96 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4868 megabytes
-    Info: Processing ended: Sat Feb 06 16:36:26 2021
+    Info: Peak virtual memory: 4866 megabytes
+    Info: Processing ended: Sat Feb 06 16:48:05 2021
     Info: Elapsed time: 00:00:23
     Info: Total CPU time (on all processors): 00:00:33
 

@@ -29,9 +29,9 @@ module KnightRiderFlasher(
 	
 	always @ (ledNumber)
 		begin
-			if(ledNumber <= 1)
+			if(ledNumber == 15)
 			  direction = 0;
-			if(ledNumber >= 9)
+			if(ledNumber == 10)
 				direction = 1;
 		end
 		
