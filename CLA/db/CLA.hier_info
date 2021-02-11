@@ -1,0 +1,30 @@
+|CLA
+AddSub <> <UNC>
+A[0] => ~NO_FANOUT~
+A[1] => ~NO_FANOUT~
+A[2] => ~NO_FANOUT~
+A[3] => ~NO_FANOUT~
+A[4] => ~NO_FANOUT~
+A[5] => ~NO_FANOUT~
+A[6] => ~NO_FANOUT~
+A[7] => ~NO_FANOUT~
+B[0] => ~NO_FANOUT~
+B[1] => ~NO_FANOUT~
+B[2] => ~NO_FANOUT~
+B[3] => ~NO_FANOUT~
+B[4] => ~NO_FANOUT~
+B[5] => ~NO_FANOUT~
+B[6] => ~NO_FANOUT~
+B[7] => ~NO_FANOUT~
+R[0] <= <GND>
+R[1] <= <GND>
+R[2] <= <GND>
+R[3] <= <GND>
+R[4] <= <GND>
+R[5] <= <GND>
+R[6] <= <GND>
+R[7] <= <GND>
+Cout <= <GND>
+OVR <= <GND>
+
+
