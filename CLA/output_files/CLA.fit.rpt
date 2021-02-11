@@ -1,5 +1,5 @@
 Fitter report for CLA
-Thu Feb 11 00:19:12 2021
+Thu Feb 11 01:39:42 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -58,7 +58,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Thu Feb 11 00:19:12 2021       ;
+; Fitter Status                   ; Successful - Thu Feb 11 01:39:42 2021       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; CLA                                         ;
 ; Top-level Entity Name           ; CLA                                         ;
@@ -1746,7 +1746,7 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.21 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.20 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1756,10 +1756,10 @@ Warning (169064): Following 1 pins have no output enable or a GND or VCC output 
     Info (169065): Pin AddSub has a permanently disabled output enable File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/CLA/CLA.v Line: 3
 Info (144001): Generated suppressed messages file /Desktop/Spring2021/Advanced Digital Logic/CLA/output_files/CLA.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 6983 megabytes
-    Info: Processing ended: Thu Feb 11 00:19:13 2021
-    Info: Elapsed time: 00:00:42
-    Info: Total CPU time (on all processors): 00:01:40
+    Info: Peak virtual memory: 6984 megabytes
+    Info: Processing ended: Thu Feb 11 01:39:43 2021
+    Info: Elapsed time: 00:00:41
+    Info: Total CPU time (on all processors): 00:01:37
 
 
 +----------------------------+

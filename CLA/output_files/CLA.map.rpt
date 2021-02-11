@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CLA
-Thu Feb 11 00:18:30 2021
+Thu Feb 11 01:39:01 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -42,7 +42,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Feb 11 00:18:30 2021       ;
+; Analysis & Synthesis Status     ; Successful - Thu Feb 11 01:39:01 2021       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; CLA                                         ;
 ; Top-level Entity Name           ; CLA                                         ;
@@ -257,13 +257,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Feb 11 00:18:13 2021
+    Info: Processing started: Thu Feb 11 01:38:43 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CLA -c CLA
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file cla.v
+Info (12021): Found 2 design units, including 2 entities, in source file cla.v
     Info (12023): Found entity 1: CLA File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/CLA/CLA.v Line: 2
+    Info (12023): Found entity 2: FAbehave File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/CLA/CLA.v Line: 18
 Info (12127): Elaborating entity "CLA" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at CLA.v(9): object "p" assigned a value but never read File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/CLA/CLA.v Line: 9
+Warning (10036): Verilog HDL or VHDL warning at CLA.v(9): object "g" assigned a value but never read File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/CLA/CLA.v Line: 9
 Warning (10034): Output port "R" at CLA.v(5) has no driver File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/CLA/CLA.v Line: 5
 Warning (10034): Output port "Cout" at CLA.v(6) has no driver File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/CLA/CLA.v Line: 6
 Warning (10034): Output port "OVR" at CLA.v(7) has no driver File: //vmware-host/Shared Folders/Desktop/Spring2021/Advanced Digital Logic/CLA/CLA.v Line: 7
@@ -304,10 +307,10 @@ Info (21057): Implemented 27 device resources after synthesis - the final resour
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 10 output pins
     Info (21060): Implemented 1 bidirectional pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 35 warnings
-    Info: Peak virtual memory: 4798 megabytes
-    Info: Processing ended: Thu Feb 11 00:18:30 2021
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:27
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 37 warnings
+    Info: Peak virtual memory: 4797 megabytes
+    Info: Processing ended: Thu Feb 11 01:39:01 2021
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:30
 
 
